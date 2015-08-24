@@ -25,8 +25,8 @@ var arc = d3.svg.arc()
 
 var pie = d3.layout.pie()
   	.sort(null)
-  	.startAngle(1.1*Math.PI)
-    .endAngle(3.1*Math.PI)
+  	.startAngle(0)
+    .endAngle(6.28318531)
     .value(function(d) { return d.count; });
 
 var tooltip	 = d3.select('#chart')            
@@ -45,8 +45,8 @@ tooltip.append('div')
   
 
 d3.json('assets/json/donut.json', function(error, dataset) {  
-  	dataset.forEach(function(d) {                    
-		d.count = +d.count;
+  	dataset.forEach(function(d) {
+  		d.count = +d.count;
 		d.enabled = true;                            
   	});                                              
 
