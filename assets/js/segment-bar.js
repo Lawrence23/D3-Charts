@@ -33,11 +33,6 @@ segTooltip.append('div')
 
 d3.json("assets/json/segment.json", function(data) {
 
-    // Parse numbers, and sort by value.
-    /*data.forEach(function(d) { 
-        d.value = +d.value; 
-        d.enabled = true;
-    });*/
     data.sort(function(a, b) { return b.value - a.value; });
 
     // Set the scale domain.

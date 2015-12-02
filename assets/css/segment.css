@@ -2,10 +2,6 @@ body {
   font: 10px sans-serif;
 }
 
-/* .bar rect {
-  fill: steelblue;
-} */
-
 .bar text.value {
   fill: black;
 }

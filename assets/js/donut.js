@@ -5,7 +5,6 @@ var donutWidth = 125;
 var legendRectSize = 18;                                  
 var legendSpacing = 4;  
 var color = d3.scale.category20b();
-//var color = d3.scale.ordinal().range(['#A60F2B', '#648C85', '#B3F2C9', '#528C18', '#C3F25C']); 
 
 var svg = d3.select('#chart')
 	.append('svg')
@@ -89,9 +88,6 @@ d3.json('assets/json/donut.json', function(error, dataset) {
          		return arc(d);
        		}
   		});	  	
-/*path.on('mouseout', function() {
-  tooltip.style('display', 'none');
-});*/  
 
 	var legend = svg.selectAll('.legend')                     
 	    .data(color.domain())                                   
